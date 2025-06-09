@@ -137,7 +137,7 @@
                 .then(response => response.json())
                 .then(data => {
                     localStorage.setItem("audio_list", JSON.stringify(data));
-                    window.location.reload();
+                    write_list();
                 })
                 .catch(error => {
                     error();
