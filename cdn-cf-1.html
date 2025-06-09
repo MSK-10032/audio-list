@@ -133,7 +133,9 @@
             }
         }
         function error() {
-            document.write("<strong>获取音频列表失败<br>这可能是由于请求速度超过了GitHub API的速率限制<br>或无法连接GitHub API导致的<br>可以尝试等待一段时间后刷新页面重新加载<br>该过程可能需要等待数分钟至数小时不等</strong>");
+            const alert_m = "<strong>获取音频列表失败<br>这可能是由于请求速度超过了GitHub API的速率限制<br>或无法连接GitHub API导致的<br>可以尝试等待一段时间后刷新页面重新加载<br>该过程可能需要等待数分钟至数小时不等</strong>";
+            document.write(alert_m);
+            alert(alert_m);
         }
 
         if (localStorage.getItem("audio_list") == null) {
