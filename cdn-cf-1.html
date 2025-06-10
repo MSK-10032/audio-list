@@ -3,12 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Audio List - CMSK CDN</title>
+    <title>Audio List - CMSK</title>
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="https://cf-1.cdn.御坂网络.御坂美琴.cloudns.org/style/all.css">
     <script src="https://cf-1.cdn.御坂网络.御坂美琴.cloudns.org/script/all.js"></script>
     <!-- <script src="/script/qrcode.js"></script> -->
     <!-- <script src="https://cf-1.cdn.御坂网络.御坂美琴.cloudns.org/script/media-player.js"></script> -->
+    <style>
+        html,
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline solid #fff;
+        }
+
+        a[href="/"]{
+            margin-right: 1em;
+        }
+    </style>
     <audio id="audio_player"></audio>
 </head>
 
@@ -104,6 +124,7 @@
     </noscript>
     <!-- main -->
     <h1>Audio List</h1>
+    <a href="/">主页</a>
     <a href="javascript:localStorage.clear('audio_list', '');window.location.reload();">刷新列表缓存</a>
     <script>
         const list_url_api = "https://api.github.com/repos/MSK-10032/CDN-CF-1/contents/audio/",
