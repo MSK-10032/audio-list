@@ -25,8 +25,12 @@
             text-decoration: underline solid #fff;
         }
 
-        a[href="/"]{
+        a[href="/"] {
             margin-right: 1em;
+        }
+
+        p a[target="_blank"] {
+            margin-left: 1em;
         }
     </style>
     <audio id="audio_player"></audio>
@@ -128,7 +132,7 @@
     <a href="javascript:localStorage.clear('audio_list', '');window.location.reload();">刷新列表缓存</a>
     <script>
         const list_url_api = "https://api.github.com/repos/MSK-10032/CDN-CF-1/contents/audio/",
-            file_url_root = "https://cf-1.cdn.xn--uesr8ql90amna.xn--uesr8qr0rdwk.cloudns.org/audio/";
+            file_url_root = "https://cf-1.cdn.御坂网络.御坂美琴.cloudns.org/audio/";
 
         function audio(file_url) {
             const audio_player = document.querySelector("#audio_player");
@@ -149,7 +153,7 @@
             } else {
                 audio_list.forEach(function (item) {
                     const audio_name = item.name;
-                    document.write(`<p><a href="javascript:audio(\`${file_url_root}${audio_name}\`)">${audio_name}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="${file_url_root}${audio_name}"" target="_blank">Source</a></p>`);
+                    document.write(`<p id="${audio_name}"><a href="javascript:audio(\`${file_url_root}${audio_name}\`)">${audio_name}</a><a href="${file_url_root}${audio_name}" target="_blank">Source</a></p>`);
                 });
             }
         }
