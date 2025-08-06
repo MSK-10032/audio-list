@@ -140,9 +140,11 @@
                 audio_player.sha256 = sha256(file_url);
                 audio_player.src = file_url;
                 audio_player.play();
+                 document.querySelector("title").innerText = this.innerText + " - Audio List - CMSK";
             } else {
                 audio_player.pause();
                 audio_player.src = "";
+                document.querySelector("title").innerText = "Audio List - CMSK";
             }
         }
         function write_list() {
